@@ -1,24 +1,9 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+//import logo from './logo.svg';
 import './App.css';
 import Comment from './components/comment';
 import Like from './components/like'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
 
 class Status extends React.Component {
   render() {
@@ -31,7 +16,7 @@ class Status extends React.Component {
                 <div className="row">
                   <a href="#">My ToDo++ app</a>
                 </div>
-                <div class="row">
+                <div className="row">
                   <small className="post-time">10 mins</small>
                 </div>
               </div>
@@ -40,7 +25,7 @@ class Status extends React.Component {
           </div>
           <p>Hello world!</p>
           <div className="card-footer text-muted" />
-            <Comment />
+            <Comment maxLetters={20} />
         </div>
       </div>
     )
